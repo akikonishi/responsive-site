@@ -1,0 +1,214 @@
+@import "compass";
+@import url('https://fonts.googleapis.com/css?family=Abel|Spirax');
+// font-family
+$baseFontFamily :'游明朝体', 'Yu Mincho','ヒラギノ明朝 Pro W3','Hiragino Mincho Pro','メイリオ', Meiryo, serif;
+
+// colors
+$baseColor: #FFF5E8;
+$subColor: #80A093;
+$keyColor: #E98B70;
+$fontColor: #283C14;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 20%), lighten($keyColor, 5%), darken($keyColor, 30%));
+  text-decoration: none;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.spirax {
+  font-family: 'Spirax', serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+// desktop
+@media (min-width: 769px) {
+
+  /* Base
+  ------------------------------------------------------------*/
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Header
+------------------------------------------------------------*/
+header{
+.top_image{
+  width:100%;
+  height:250px;
+  background-image:url('../images/garden.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+h1 {
+  @extend .abel;
+  font-size: 6rem;
+  @extend .uppercase;
+  color:#fff;
+  opacity:0.6;
+  text-align:center;
+}
+}
+// desktop
+@media (min-width: 769px) {
+header{
+  .top_image{
+    height:500px;
+  }
+  h1 {
+    font-size: 17rem;
+  }
+}
+}
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 95%;
+    @extend .block-center;
+  }
+  h2 {
+    @extend .spirax;
+    font-size: 2rem;
+    @extend .uppercase;
+  }
+  
+// desktop
+@media (min-width: 769px){
+  h2 {
+    font-size:3.5rem;
+  }
+}
+
+}
+
+// Type
+#type{
+  background-color:$baseColor;
+  .container{
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column); //タイプboxを縦に並べる
+  }
+  .type-box{
+    @include flex(1);
+    margin:5px;
+    padding: 20px 5px 15px 5px;
+    background-color:$subColor;
+    @include box-sizing(border-box);
+  i{
+    font-size: 10rem;
+    color:#fff;
+    opacity:0.8;
+    
+    }
+  }
+  .type-box-title{
+    width:200px;
+    height:200px;
+    @include border-radius(100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: auto 200px;
+    margin:0 auto;
+  }
+  .type-box-detail{
+    margin: 10px 0;
+    padding: 20px;
+  }
+  h3{
+    font-weight: bold;
+    font-size:2rem;
+  }
+}
+
+// desktop
+@media (min-width: 769px) {
+  
+  // Type
+  #type{
+    .container{
+      @include flex-direction(row);     //タイプboxを横に並べる
+      justify-content: space-between;
+    }
+    .type-box{
+      margin: 0 10px;                   //左右マージン
+    }
+    i{
+      &:hover{
+      color:$fontColor;
+      opacity:0.5;
+    }
+    }
+  }
+}
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: $subColor;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF;
+  h2{
+    font-weight: bold;
+    font-size: 2rem;
+    @extend .spirax;
+  }
+  .button{
+    width:170px;
+    background-color:$keyColor;
+    margin: 10px auto;
+    padding: 10px;
+    @include border-radius(50px);
+  }
+  a{
+    color: #FFF;
+  }
+}
+
+
+// desktop
+@media (min-width: 769px) {
+  
+}

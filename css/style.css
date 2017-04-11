@@ -1,0 +1,155 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Abel|Spirax");
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #283C14;
+  font-size: 1.4rem;
+  font-family: "游明朝体", "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "メイリオ", Meiryo, serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #FFF5E8; }
+
+a {
+  color: #E98B70;
+  text-decoration: none; }
+  a:visited {
+    color: #a6391a; }
+  a:hover {
+    color: #d34820; }
+  a:active {
+    color: #ec9d86; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, section .container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.abel, header h1 {
+  font-family: 'Abel', sans-serif; }
+
+.spirax, section h2, footer h2 {
+  font-family: 'Spirax', serif; }
+
+.uppercase, header h1, section h2 {
+  text-transform: uppercase; }
+
+@media (min-width: 769px) {
+  /* Base
+  ------------------------------------------------------------*/
+  a:hover {
+    text-decoration: none; } }
+/* Header
+------------------------------------------------------------*/
+header .top_image {
+  width: 100%;
+  height: 250px;
+  background-image: url("../images/garden.jpg");
+  background-size: cover;
+  background-position: top center; }
+header h1 {
+  font-size: 6rem;
+  color: #fff;
+  opacity: 0.6;
+  text-align: center; }
+
+@media (min-width: 769px) {
+  header .top_image {
+    height: 500px; }
+  header h1 {
+    font-size: 17rem; } }
+/* Contents
+------------------------------------------------------------*/
+section {
+  padding: 60px 0; }
+  section .container {
+    width: 95%; }
+  section h2 {
+    font-size: 2rem; }
+  @media (min-width: 769px) {
+    section h2 {
+      font-size: 3.5rem; } }
+
+#type {
+  background-color: #FFF5E8; }
+  #type .container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  #type .type-box {
+    -webkit-flex: 1;
+    flex: 1;
+    margin: 5px;
+    padding: 20px 5px 15px 5px;
+    background-color: #80A093;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    #type .type-box i {
+      font-size: 10rem;
+      color: #fff;
+      opacity: 0.8; }
+  #type .type-box-title {
+    width: 200px;
+    height: 200px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: auto 200px;
+    margin: 0 auto; }
+  #type .type-box-detail {
+    margin: 10px 0;
+    padding: 20px; }
+  #type h3 {
+    font-weight: bold;
+    font-size: 2rem; }
+
+@media (min-width: 769px) {
+  #type .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #type .type-box {
+    margin: 0 10px; }
+  #type i:hover {
+    color: #283C14;
+    opacity: 0.5; } }
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: #80A093;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF; }
+  footer h2 {
+    font-weight: bold;
+    font-size: 2rem; }
+  footer .button {
+    width: 170px;
+    background-color: #E98B70;
+    margin: 10px auto;
+    padding: 10px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px; }
+  footer a {
+    color: #FFF; }
+
+/*# sourceMappingURL=style.css.map */
